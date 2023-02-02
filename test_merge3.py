@@ -127,7 +127,7 @@ class TestMerge3(unittest.TestCase):
                            [b'aaa', b'bbb', b'zz'],
                            [b'zz'])
 
-        # todo: should use a sentinal at end as from get_matching_blocks
+        # todo: should use a sentinel at end as from get_matching_blocks
         # to match without zz
         self.assertEqual(list(m3.find_sync_regions()),
                          [(0, 1, 2, 3, 0, 1),
@@ -145,7 +145,7 @@ class TestMerge3(unittest.TestCase):
         m3 = merge3.Merge3([],
                            ['aaa', 'bbb'],
                            [])
-        # todo: should use a sentinal at end as from get_matching_blocks
+        # todo: should use a sentinel at end as from get_matching_blocks
         # to match without zz
         self.assertEqual(list(m3.find_sync_regions()),
                          [(0, 0, 2, 2, 0, 0)])
